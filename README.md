@@ -64,3 +64,7 @@ No início da linha atual do terminal, você verá "(env3)", indicando que o amb
 Para certificar-se que a versão de Python usada no ambiente virtual é a 3.7, como o esperado, execute Python, chamando `python`. Veja se o número da versão que aparece no topo do cabeçalho emitido por Python é 3.7.
 
 ## Tópicos
+
+## 1. Trabalhando com imagens
+
+Código desenvolvido neste tópico disponível [aqui]().
