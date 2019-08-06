@@ -67,4 +67,17 @@ Para certificar-se que a versão de Python usada no ambiente virtual é a 3.7, c
 
 ## 1. Trabalhando com imagens
 
-Código desenvolvido neste tópico disponível [aqui]().
+Código desenvolvido neste tópico disponível [aqui](https://github.com/antoniojnr/topicos-opencv/tree/master/1-imagens).
+
+Conteúdo abordado:
+
+* Carregar imagem
+* Obter informações do tamanho da imagem
+* Exibir imagem
+* Salvar imagem
+
+## 2. Operações em imagens
+
+Código desenvolvido neste tópico disponível [aqui](https://github.com/antoniojnr/topicos-opencv/tree/master/2-ops-imagens).
+
+
