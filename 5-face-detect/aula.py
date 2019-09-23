@@ -1,5 +1,6 @@
 import cv2
 import sys
+import numpy as np
 
 caminho = sys.argv[1]
 faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -22,8 +23,18 @@ faces = faceCascade.detectMultiScale(
 
 print("Faces encontradas:", len(faces))
 
+kernel = np.ones((7, 7), np.float32) / 25
+
 for (x, y, w, h) in faces:
-  cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2)
+  # transformar as faces para escala de cinza
+  # regiao = img[y:y+h, x:x+w]
+  # cinza_1ch = cv2.cvtColor(regiao, cv2.COLOR_BGR2GRAY)
+  # cinza_3ch = cv2.cvtColor(cinza_1ch, cv2.COLOR_GRAY2BGR)
+  # img[y:y+h, x:x+w] = cinza_3ch
+
+  regiao = img[y:y+h, x:x+w]
+  borrada = cv2.blur(regiao, (25, 25))
+  img[y:y+h, x:x+w] = borrada
 
 # cv2.imshow("Faces", img)
 # cv2.waitKey(0)
