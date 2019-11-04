@@ -33,7 +33,4 @@ for f in fatias:
   fatiada[0:altura, pos:pos+fatia] = f
   pos = pos + fatia
 
-cv2.imshow("imagem", fatiada)
-
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+cv2.imwrite("fatiada.png", fatiada)
